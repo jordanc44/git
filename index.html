@@ -5,7 +5,7 @@
 <div id="content">
         <div id="item">
         <span>Design T-shirts</span>
-        <div id="image"><p> Hello!
+        <p id="text"> Hello!
         </p>
         </div>
         <span class="price">$12.65</span>
@@ -37,19 +37,10 @@ $.shake({
     }
 });
    function changeProduct() {
-        var shirts = [
-                      ["HI"],
-                      ["images/2.jpg","10.00"],
-                      ["images/3.jpg","15.50"],
-                      ["images/4.jpg","12.65"],
-                      ["images/5.jpg","13.00"],
-                      ["images/6.jpg","11.85"]
-                      ];
- 
-        var pos = Math.floor((Math.random() * shirts.length) + 0);
-        $("#image").html($("<img/>").attr("src", shirts[pos][0]));
-        $(".price").html("$" + shirts[pos][1]);
-    }
+   	
+   	document.getElementById("text").innerHTML = "New text!";
+   }
+        
  
     $(document).ready(function() {
         function onShake() {
