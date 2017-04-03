@@ -9,7 +9,7 @@
 
 <div id="content">
         <span>Design T-shirts</span>
-        <p id="text"> Hello! </p>
+        <p id="text"> 0 </p>
         <span class="price">$12.65</span>
         <h4>Shake phone to change product</h4>
 </div>
@@ -20,10 +20,8 @@ var counter = 0;
 
    function changeProduct() {
     counter = counter + 1;
-    if(counter == 10)
-   {
-     document.getElementById("text").innerHTML = "New text!";
-   }
+    
+     document.getElementById("text").innerHTML = counter;
     
    }
         
