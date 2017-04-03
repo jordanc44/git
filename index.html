@@ -16,11 +16,11 @@
 
 <script type="text/javascript">
 
-
+var counter = 0;
 
    function changeProduct() {
+    counter = counter + 1;
     
-    document.getElementById("text").innerHTML = "New text!";
    }
         
  
@@ -41,6 +41,11 @@
             }
         });
     });
+
+   if(counter = 30)
+   {
+     document.getElementById("text").innerHTML = "New text!";
+   }
 
 </script>
 
