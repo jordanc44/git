@@ -1,6 +1,32 @@
 
 <body>
 
+<script type="text/javascript" src="jquery.min.js"></script>
+ 
+<!-- Shake library - https://github.com/lhagan/jquery.ios-shake -->
+<script type="text/javascript" src="jquery.ios-shake.js"></script>
+ 
+<script type="text/javascript">
+   function changeProduct() {
+    
+    document.getElementById("text").innerHTML = "New text!";
+   }
+        
+ 
+   $(document).ready(function() {
+        function onShake() {
+            changeProduct();
+        }
+ 
+        $.shake({
+            callback: function() {
+                onShake();
+            }
+        });
+    });
+
+</script>
+
 
 <div id="content">
         <div id="item">
@@ -13,47 +39,4 @@
         <h4>Shake phone to change product</h4>
 </div>
 
-
-
-
-
-<script type="text/javascript" src="jquery.min.js"></script>
- 
-<!-- Shake library - https://github.com/lhagan/jquery.ios-shake -->
-<script type="text/javascript" src="https://github.com/lhagan/jquery.ios-shake.js"></script>
-
- 
-<script type="text/javascript">
-
-$.shake({
-    debug: "#debugdiv",             // debug div id
-    supported: "#notsupporteddiv",  // not supported message div
-    violence: 0.5,                  // single shake sensitivity
-    hf: 0.2,                        // high-pass filter constant
-    shakethreshold: 1,              // number of single shakes required to fire a shake event
-    debounce: 1000,                 // delay between shake events (in ms)
-    callback: function() {
-        yourFunction();
-    }
-});
-   function changeProduct() {
-   	
-   	document.getElementById("text").innerHTML = "New text!";
-   }
-        
- 
-    $(document).ready(function() {
-        function onShake() {
-            changeProduct();
-        }
- 
-        $.shake({
-            callback: function() {
-                onShake();
-            }
-        });
-    });
-        // Do something here on a 'shake'
-    }
-</script>
 </body>
