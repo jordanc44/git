@@ -20,7 +20,7 @@ var counter = 0;
 
    function changeProduct() {
     counter = counter + 1;
-    if(counter == 30)
+    if(counter == 10)
    {
      document.getElementById("text").innerHTML = "New text!";
    }
@@ -38,7 +38,7 @@ var counter = 0;
     supported: "#notsupporteddiv",  // not supported message div
     violence: 0.5,                  // single shake sensitivity
     hf: 0.2,                        // high-pass filter constant
-    shakethreshold: 10,              // number of single shakes required to fire a shake event
+    shakethreshold: 5,              // number of single shakes required to fire a shake event
     debounce: 1000,  
             callback: function() {
                 onShake();
