@@ -1,0 +1,68 @@
+
+<body>
+
+
+<div id="content">
+        <div id="item">
+        <span>Design T-shirts</span>
+        <div id="image"><p> Hello!
+        </p>
+        </div>
+        <span class="price">$12.65</span>
+        </div>
+        <h4>Shake phone to change product</h4>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="jquery.min.js"></script>
+ 
+<!-- Shake library - https://github.com/lhagan/jquery.ios-shake -->
+<script type="text/javascript" src="https://github.com/lhagan/jquery.ios-shake.js"></script>
+
+ 
+<script type="text/javascript">
+
+$.shake({
+    debug: "#debugdiv",             // debug div id
+    supported: "#notsupporteddiv",  // not supported message div
+    violence: 0.5,                  // single shake sensitivity
+    hf: 0.2,                        // high-pass filter constant
+    shakethreshold: 1,              // number of single shakes required to fire a shake event
+    debounce: 1000,                 // delay between shake events (in ms)
+    callback: function() {
+        yourFunction();
+    }
+});
+   function changeProduct() {
+        var shirts = [
+                      ["HI"],
+                      ["images/2.jpg","10.00"],
+                      ["images/3.jpg","15.50"],
+                      ["images/4.jpg","12.65"],
+                      ["images/5.jpg","13.00"],
+                      ["images/6.jpg","11.85"]
+                      ];
+ 
+        var pos = Math.floor((Math.random() * shirts.length) + 0);
+        $("#image").html($("<img/>").attr("src", shirts[pos][0]));
+        $(".price").html("$" + shirts[pos][1]);
+    }
+ 
+    $(document).ready(function() {
+        function onShake() {
+            changeProduct();
+        }
+ 
+        $.shake({
+            callback: function() {
+                onShake();
+            }
+        });
+    });
+        // Do something here on a 'shake'
+    }
+</script>
+</body>
