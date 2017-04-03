@@ -16,17 +16,7 @@
 
 <script type="text/javascript">
 
-$.shake({
-    debug: "#debugdiv",             // debug div id
-    supported: "#notsupporteddiv",  // not supported message div
-    violence: 0.5,                  // single shake sensitivity
-    hf: 0.2,                        // high-pass filter constant
-    shakethreshold: 1,              // number of single shakes required to fire a shake event
-    debounce: 1000,                 // delay between shake events (in ms)
-    callback: function() {
-        yourFunction();
-    }
-});
+
 
    function changeProduct() {
     
@@ -40,6 +30,12 @@ $.shake({
         }
  
         $.shake({
+    debug: "#debugdiv",             // debug div id
+    supported: "#notsupporteddiv",  // not supported message div
+    violence: 0.5,                  // single shake sensitivity
+    hf: 0.2,                        // high-pass filter constant
+    shakethreshold: 1,              // number of single shakes required to fire a shake event
+    debounce: 1000,  
             callback: function() {
                 onShake();
             }
