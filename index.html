@@ -32,9 +32,9 @@
         $.shake({
     debug: "#debugdiv",             // debug div id
     supported: "#notsupporteddiv",  // not supported message div
-    violence: 0.5,                  // single shake sensitivity
+    violence: 2,                  // single shake sensitivity
     hf: 0.2,                        // high-pass filter constant
-    shakethreshold: 1,              // number of single shakes required to fire a shake event
+    shakethreshold: 5,              // number of single shakes required to fire a shake event
     debounce: 1000,  
             callback: function() {
                 onShake();
