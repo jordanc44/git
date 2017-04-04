@@ -8,8 +8,8 @@
 
 
 <div id="content">
-        <span>Test application </span>
-        <p id="text"> 0 </p>
+        <span>Test application</span>
+        <img id="text" scr="front.png">
         <span class="price">Count ^^</span>
         
 </div>
@@ -21,9 +21,23 @@ var counter = 0;
    function changeProduct() {
     counter = counter + 1;
     
-     document.getElementById("text").innerHTML = counter;
-    
+    if(counter == 9)
+    { 
+        document.getElementById("text").src = "first.png";
    }
+   if(counter == 18)
+    { 
+        document.getElementById("text").src = "second.png";
+   }
+   if(counter == 26)
+    { 
+        document.getElementById("text").src = "third.png";
+   }
+   if(counter == 35)
+    { 
+        document.getElementById("text").src = "fourth.png";
+   }
+}
         
  
    $(document).ready(function() {
